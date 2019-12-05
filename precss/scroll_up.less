@@ -1,0 +1,40 @@
+@import "vars";
+@import "smart-grid";
+.scroll-to-top {
+  background: @color__bg none repeat scroll 0 0;
+  color: @color__main;
+  bottom: 3%;
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+  right: 3%;
+  z-index: 22;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: 1px solid @color__grey;
+  text-align: center;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  &:hover{
+    border: 1px solid @color__contrast;
+    opacity: .8;
+  }
+  &__img{
+    display: block;
+    fill: currentColor;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.vis {
+  /*  display: block;*/
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}

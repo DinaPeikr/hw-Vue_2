@@ -1,0 +1,119 @@
+@import "vars";
+@import "smart-grid";
+.promo{
+  background: @color__main;
+  color: @color__bg;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &__inner{
+   .row-flex();
+    justify-content: center;
+    align-items: center;
+    .md-block({
+      justify-content: space-around;
+    });
+  }
+  &__content{
+    .col();
+    .size(12);
+    .size-sm(8);
+    .size-md(7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text{
+    .size_custom(10);
+    font-size: 0.875rem;
+    .xs-block({
+      font-size: 1.125rem;
+    });
+    .md-block({
+      font-size: 1.25rem;
+    })
+  }
+  &__img{
+    .size_custom(2);
+    margin-right: 10px;
+    transform: rotate(-20deg);
+    box-shadow: 0 3px 7px 0 rgba(48, 156, 166, 0.35);
+    .sm-block({
+      margin-right: 20px;
+      margin-top: -30px;
+      transform: none;
+    });
+    .md-block({
+      margin-right: 30px;
+    });
+
+   }
+  &__link{
+    .col();
+    .size(12);
+    .size-sm(4);
+    .size-md(3);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sm-block({
+      margin-top: 0;
+      display: block;
+      text-align: right;
+    });
+    &::before{
+     content: "";
+     display: block;
+     background: @color__bg;
+     flex-grow: 9999;
+     height: 1px;
+      .sm-block({
+        flex-grow: 0;
+        display: none;
+      });
+   }
+  }
+  &__btn{
+    background: transparent;
+    box-shadow: none;
+    font-size: 0.75rem;
+    padding: 10px;
+    border: 1px solid #ffcc33;
+    flex-grow: 1;
+    margin-left: 10px;
+    &:hover{
+      box-shadow: none;
+      border: 1px solid @color__bg;
+      background-clip: padding-box;
+      box-sizing: border-box;
+    }
+    &:active{
+      border: 1px solid #ffcc33;
+      box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 0.35);
+    }
+    .xs-block({
+      font-size: 1rem;
+    });
+    .sm-block({
+      margin-left: 0;
+      padding: 10px 15px;
+      border: 1px solid @color__bg;
+      &:hover{
+        border: 1px solid #ffcc33;
+      }
+      &:active{
+        border: 1px solid @color__bg;
+      }
+    });
+    .md-block({
+      padding: 10px 20px;
+      font-size: 1.125rem;
+  });
+    .lg-block({
+      padding: 10px 30px;
+  });
+
+  }
+
+
+}

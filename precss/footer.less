@@ -1,0 +1,202 @@
+@import "vars";
+@import "smart-grid";
+.footer{
+  background: @color__footer_bg;
+  color: @color__bg;
+  padding-bottom: 20px;
+  transition: all .5s;
+  &__menu{
+    display: none;
+    align-items: center;
+    border-bottom: 1px solid @color__bg;
+    .md-block({
+      display: flex;
+    });
+    &_item{
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 20px;
+      &:first-of-type {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      &.active .footer__menu_link {
+        color: @color__main;
+      }
+    }
+    &_link{
+      display: flex;
+      font-size: 1rem;
+      align-items: center;
+      &:hover{
+        color: @color__grey;
+      }
+    }
+  }
+
+  &__inner{
+      .row-flex();
+      justify-content: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    .md-block({
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    })
+
+    }
+  &__logo{
+    .col();
+    .size(12);
+    .size-md(6);
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .md-block({
+      margin-top: 0;
+      margin-bottom: 0;
+      justify-content: flex-start;
+    });
+  }
+
+  &__socialPhone{
+    .col();
+    .size(12);
+    .size-md(6);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .md-block({
+      margin-top: 0;
+      margin-bottom: 0;
+    });
+  }
+  &__social{
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .md-block({
+      justify-content: flex-end;
+      margin-right: 20px;
+    });
+     &_link{
+       margin: 0 20px;
+       display: inline-block;
+       transition: all .5s;
+       &:hover .footer__social_img {
+       fill: @color__main;
+     }
+    }
+    &_img{
+      display: inline-block;
+      fill: @color__bg;
+      transition: all .3s;
+      &-vk{
+        width: 38px;
+        height: 22px;
+      }
+      &-twitter{
+        width: 25px;
+        height: 31px;
+      }
+      &-facebook{
+        width: 15px;
+        height: 32px;
+      }
+    }
+  }
+  &__phone{
+    justify-content: center;
+    padding: 10px 0;
+    .md-block({
+      justify-content: flex-end;
+    });
+  }
+
+
+  &__copyright{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+      &_text {
+        font-size: 0.75rem;
+        margin-bottom: 3px;
+      }
+      &_link {
+        font-size: 0.75rem;
+        display: block;
+        margin-bottom: 3px;
+          &:not(:last-of-type) .footer__copyright_link-inner {
+          .md-block({
+          border-right: 1px solid @color__grey;
+        });
+          }
+        .md-block({
+          display: inline-block;
+        });
+        &-inner{
+          border-bottom: 1px solid @color__grey;
+          &:hover{
+          border-bottom: 1px solid @color__bg;
+          }
+          .md-block({
+            padding-right:7px;
+            padding-left: 7px;              margin-left: -4px;
+          });
+        }
+      }
+
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    &__img {
+      display: inline-block;
+      width: 114px;
+      height: 106px;
+      margin-right: 10px;
+      .md-block({
+        width: 145px;
+        height: 134px;
+    })
+    }
+    &__text {
+      font-family: @font_FiraSans;
+      font-size: 1.275rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      .md-block({
+        font-size: 1.625rem;
+      })
+    }
+  }
+
+  .phone {
+    display: flex;
+    align-items: flex-start;
+    &__img {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: all .5s;
+    }
+    &__link {
+      font-size: 2rem;
+      line-height: 0.8;
+      font-family: @font_FiraSans;
+      &:hover .phone__text {
+        border-bottom: 1px solid @color__grey;
+      }
+    }
+    &__text {
+      font-size: 1.125rem;
+      border-bottom: 1px solid @color__bg;
+    }
+  }
+}

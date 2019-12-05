@@ -1,0 +1,264 @@
+@import "vars";
+@import "smart-grid";
+.reset();
+button, input, textarea {
+  -webkit-appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: @font_size;
+  line-height: @line_height;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, .link {
+  text-decoration: none;
+  color: inherit;
+  transition: all .5s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:link, .link:link {
+  outline: none;
+}
+
+a:visited, .link:visited {
+  outline: none;
+}
+
+a:hover, .link:hover {
+  outline: none;
+}
+
+a:focus, .link:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+a:active, .link:active {
+  outline: none;
+  background-color: transparent;
+}
+
+.site-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.pseudo-full-width-background::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: inherit;
+  top: 0;
+  left: -50vw;
+  right: -50vw;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -1;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1175px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 @offset_one_side;
+}
+
+@supports (padding: 0) {
+  .wrapper {
+    padding-left: max(@offset_one_side, env(safe-area-insert-left));
+    padding-right: max(@offset_one_side, env(safe-area-insert-right));
+  }
+}
+.wrapper__full{
+  padding-left: @offset_one_side;
+  padding-right: @offset_one_side;
+  position: relative;
+  min-width: 320px;
+}
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.swing{
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  35% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  65% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  85% {
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  35% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  65% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  85% {
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.block{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border: 0 none;
+  outline: 0 none;
+  background: @color__grey;
+  color: currentColor;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+}
+
+.section-heading{
+  display: inline-block;
+  font-size: 1.5rem;
+  color: currentColor;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 8px;
+  .sm-block({
+    font-size: 2.75rem;
+    padding-bottom: 12px;
+  });
+}
+.label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: currentColor;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  background: @color__labelBtn;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+  &:hover{
+    background-color: darken(@color__labelBtn, 5%);
+  }
+  &:focus{
+    background-color: @color__labelBtn;
+  }
+
+  &:active {
+    background-color: @color__labelBtn;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

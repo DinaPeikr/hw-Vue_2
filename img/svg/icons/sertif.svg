@@ -1,0 +1,9 @@
+<svg id="sertif" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 46">
+  <title>sertif</title>
+  <g>
+    <path d="M35,1H1V45H37V1Zm0,42H3V3H35Z" style="fill: #ffffff"/>
+    <circle cx="19" cy="16.3" r="7.1" style="fill: none;stroke: #ffffff;stroke-miterlimit: 10;stroke-width: 2px"/>
+    <line x1="11.9" y1="30.6" x2="26" y2="30.6" style="fill: none;stroke: #ffffff;stroke-miterlimit: 10;stroke-width: 2px"/>
+    <line x1="11.9" y1="36.59" x2="26" y2="36.59" style="fill: none;stroke: #ffffff;stroke-miterlimit: 10;stroke-width: 2px"/>
+  </g>
+</svg>

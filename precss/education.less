@@ -1,0 +1,107 @@
+@import "vars";
+@import "smart-grid";
+
+.education {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  &__label {
+    font-size: 10px;
+    color: @color__bg;
+    top: -20px;
+    .lg-block({ right: -20px; });
+  }
+  &__section-heading {
+    color: @color__contrast;
+    border-bottom: 1px solid @color__main;
+    margin-bottom: 20px;
+  }
+  &__cards {
+    .row-flex();
+    justify-content: center;
+    padding-top: 20px;
+
+  }
+  &__card {
+    .col();
+    .size(12);
+    .size-xs(6);
+    .size-md(4);
+    .size-lg_custom(4);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    .lg-block({ margin-left: 10px; margin-right: 30px; });
+  }
+
+  .card {
+    position: relative;
+    border: 1px solid rgba(48, 156, 166, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s;
+    &__img {
+      transition: all .5s;
+    &:hover{
+      opacity: .8;
+    }
+      &:hover ~ .card__title{
+      opacity: .8;
+    }
+    &:hover ~ .card__link{
+       background: @color__main;
+    }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &__title {
+      display: inline-block;
+      width: 90%;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: @color__main;
+      padding: 20px 0;
+      align-self: center;
+      border-bottom: 1px solid @color__main-light;
+      transition: all .5s;
+      &:hover{
+        opacity: .8;
+        border-bottom: 1px solid @color__main;
+      }
+    }
+    &__text {
+      font-size: 0.875rem;
+      color: @color__contrast;
+      padding: 20px;
+      text-align: left;
+    }
+    &__link {
+      display: block;
+      font-family: @font_FiraSans;
+      font-size: 1rem;
+      padding: 20px;
+      color: @color__bg;
+      margin-top: auto;
+      background: @color__main-light;
+      transition: all .5s;
+      z-index: 3;
+      &:hover{
+        background: @color__main;
+      }
+      &::after {
+        content: ">";
+        display: inline-block;
+        vertical-align: middle;
+        font-size: inherit;
+        color: currentColor;
+        margin-left: 4px;
+      }
+      &_text {
+        border-bottom: 1px solid @color__bg;
+      }
+    }
+  }
+}
