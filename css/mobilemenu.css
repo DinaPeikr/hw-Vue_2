@@ -1,0 +1,131 @@
+/* Mobile Menu*/
+.mobile__menu,
+.mobile__submenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85vw;
+  max-width: 350px;
+  height: 100%;
+  background-color: #309ca6;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  will-change: transform;
+  transition: transform 0.2s ease-in-out;
+  z-index: 6;
+}
+.mobile__submenu {
+  z-index: 10;
+}
+.is_open {
+  transform: translateX(0);
+  overflow-y: auto;
+}
+.overlay {
+  cursor: pointer;
+  touch-action: manipulation;
+  pointer-events: none;
+  display: block;
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .2s linear;
+  z-index: 5;
+}
+.is_visible {
+  pointer-events: auto;
+  opacity: 1;
+}
+.mobile__menu_list:not(:first-child) {
+  border-top: 2px solid #ffffff;
+}
+.mobile__menu_item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+}
+.mobile__menu_item:hover {
+  background: #999999;
+}
+.mobile__menu_item-dropdown {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.mobile__menu_item-dropdown::after {
+  content: ">";
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  color: currentColor;
+}
+.mobile__menu_link {
+  user-select: none;
+  display: block;
+  color: #ffffff;
+  padding: 20px 10px;
+}
+.mobile__menu_link:active,
+.mobile__submenu_link:active {
+  text-decoration: underline;
+}
+/*Mobile Submenu*/
+.mobile__submenu_back {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+  background: #999999;
+  padding: 20px 10px 20px 40px;
+  display: flex;
+  align-items: center;
+}
+.mobile__submenu_back::before {
+  content: "<<";
+  font-size: 1.2rem;
+  position: absolute;
+  left: 10px;
+  color: currentColor;
+}
+.mobile__submenu_list {
+  padding-bottom: 50px;
+}
+.mobile__submenu_column-header {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all .5s;
+}
+.mobile__submenu_column-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+}
+.mobile__submenu_column-item:hover {
+  background: #999999;
+}
+.mobile__submenu_column-link {
+  user-select: none;
+  display: block;
+  color: #ffffff;
+  padding: 20px 10px;
+  font-size: 1rem;
+  transition: all .5s;
+}
+.mobile__submenu_column-link:active {
+  text-decoration: underline;
+}
+.allCurs {
+  padding: 20px 10px;
+}
+.allCurs__link {
+  border-bottom: 1px solid #ffffff;
+  font-size: 1rem;
+  transition: all .5s;
+}
+.allCurs__link:hover {
+  border-bottom: 1px solid #999999;
+}

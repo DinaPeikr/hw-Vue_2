@@ -1,0 +1,107 @@
+.teachers {
+  text-align: center;
+}
+.teachers__section-heading {
+  color: #222222;
+  border-bottom: 1px solid #309ca6;
+  margin-bottom: 20px;
+}
+.teachers__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.teachers__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #222222;
+  border: 1px solid rgba(153, 153, 153, 0.4);
+  padding: 20px 10px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .teachers__item {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.teachers .teacher__img {
+  display: block;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+}
+@media screen and (min-width: 576px) {
+  .teachers .teacher__img {
+    width: calc(83.33333333333334% - 20px);
+  }
+}
+@media screen and (min-width: 720px) {
+  .teachers .teacher__img {
+    width: calc(66.66666666666667% - 20px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .teachers .teacher__img {
+    width: calc(33.333333333333336% - 20px);
+  }
+}
+.teachers .teacher__img img {
+  width: 100%;
+}
+.teachers .teacher__content {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+  text-align: center;
+  padding-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  .teachers .teacher__content {
+    width: calc(66.66666666666667% - 20px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .teachers .teacher__content {
+    text-align: left;
+    padding-top: 0;
+  }
+}
+.teachers .teacher__title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: inline-block;
+  border-bottom: 1px solid #309ca6;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 576px) {
+  .teachers .teacher__title {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  .teachers .teacher__title {
+    font-size: 1.125rem;
+  }
+}
+.teachers .teacher__text {
+  font-size: 0.875rem;
+  margin-top: auto;
+}
